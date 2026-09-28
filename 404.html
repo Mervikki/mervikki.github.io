@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved — The Weekly Hallucination</title>
+<script>
+  // The Daily Hallucination became The Weekly Hallucination (repo renamed 28 Sep 2026).
+  // Forward old /The-Daily-Hallucination/... links to the new site.
+  (function () {
+    var p = location.pathname, rest = location.search + location.hash, m;
+    if ((m = p.match(/^\/The-Daily-Hallucination\/(\d{4}-\d{2}-\d{2}\.html)$/i))) {
+      location.replace('/The-Weekly-Hallucination/daily/' + m[1] + rest);
+    } else if ((m = p.match(/^\/The-Daily-Hallucination(\/.*)?$/i))) {
+      location.replace('/The-Weekly-Hallucination' + (m[1] || '/') + rest);
+    }
+  })();
+</script>
+</head>
+<body style="font-family: Georgia, serif; text-align: center; padding: 80px 16px; background: #F5F0E8;">
+  <p><em>Nothing here.</em> The magazine lives at
+  <a href="/The-Weekly-Hallucination/" style="color:#C0392B">The Weekly Hallucination</a>.</p>
+</body>
+</html>
